@@ -76,5 +76,6 @@ valores de `SEED_ADMIN_CEDULA` / `SEED_ADMIN_PASSWORD` si los definís antes de 
 
 El repo incluye un `Dockerfile` (build multi-stage, salida `standalone` de Next.js).
 En Coolify: crear una nueva aplicación apuntando a este repo, tipo de build "Dockerfile",
-puerto `3000`, y cargar las variables de entorno de la sección anterior. El deploy
-reconstruye la imagen en cada push (o manualmente desde el dashboard de Coolify).
+puerto `3000`, y cargar las variables de entorno de la sección anterior. Hay un webhook
+de GitHub configurado (Settings → Webhooks del repo) que dispara un redeploy automático
+en cada push a `main`; también se puede redeployar a mano desde el dashboard de Coolify.
