@@ -14,15 +14,31 @@ export function LogoMark({ className }: { className?: string }) {
   );
 }
 
-export function Logo({ className }: { className?: string }) {
+export function Logo({
+  className,
+  variant = "default",
+}: {
+  className?: string;
+  variant?: "default" | "inverted";
+}) {
   return (
     <span className={cn("inline-flex items-center gap-2.5", className)}>
       <LogoMark />
       <span className="flex flex-col leading-none">
-        <span className="font-heading text-base font-extrabold uppercase tracking-tight text-foreground">
+        <span
+          className={cn(
+            "font-heading text-base font-extrabold uppercase tracking-tight",
+            variant === "inverted" ? "text-white" : "text-foreground",
+          )}
+        >
           Apoyemos
         </span>
-        <span className="-mt-0.5 font-heading text-base font-extrabold uppercase tracking-tight text-primary">
+        <span
+          className={cn(
+            "-mt-0.5 font-heading text-base font-extrabold uppercase tracking-tight",
+            variant === "inverted" ? "text-[var(--brand-cyan)]" : "text-primary",
+          )}
+        >
           Juntos
         </span>
       </span>
