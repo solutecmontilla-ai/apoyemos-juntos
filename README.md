@@ -1,4 +1,4 @@
-# Sorteos Fundación
+# Apoyemos Juntos — Sorteos
 
 Plataforma de sorteos benéficos: landing pública, registro de participantes (cédula +
 contraseña), carga de facturas con lectura automática por IA, conversión de colones a

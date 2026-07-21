@@ -20,8 +20,8 @@ export default async function HomePage() {
   return (
     <div className="mx-auto max-w-5xl px-4 py-10 space-y-12">
       <section className="text-center space-y-4">
-        <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
-          Sorteos benéficos de la fundación
+        <h1 className="font-heading text-3xl font-extrabold uppercase tracking-tight sm:text-4xl">
+          Sorteos benéficos de <span className="text-primary">Apoyemos Juntos</span>
         </h1>
         <p className="mx-auto max-w-2xl text-muted-foreground">
           Comprá en los negocios afiliados, subí tu factura y ganá premios donados por
@@ -39,7 +39,7 @@ export default async function HomePage() {
       </section>
 
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold">Sorteos activos</h2>
+        <h2 className="font-heading text-2xl font-bold">Sorteos activos</h2>
         {sorteosActivos.length === 0 && (
           <p className="text-muted-foreground">
             En este momento no hay sorteos activos. Volvé pronto.
@@ -87,7 +87,7 @@ export default async function HomePage() {
       </section>
 
       <section id="como-participar" className="space-y-4 scroll-mt-20">
-        <h2 className="text-2xl font-semibold">¿Cómo participar?</h2>
+        <h2 className="font-heading text-2xl font-bold">¿Cómo participar?</h2>
         <ol className="list-decimal space-y-2 pl-6 text-muted-foreground">
           <li>Registrate con tu nombre completo, teléfono y cédula de identidad.</li>
           <li>Elegí el sorteo en el que querés participar.</li>

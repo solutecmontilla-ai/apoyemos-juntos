@@ -20,7 +20,7 @@ async function main() {
   if (!existente) {
     await db.insert(usuarios).values({
       cedula: cedulaNormalizada,
-      nombreCompleto: "Administrador Fundación",
+      nombreCompleto: "Administrador Apoyemos Juntos",
       telefono: "00000000",
       passwordHash: await hashPassword(adminPassword),
       rol: "admin",

@@ -25,7 +25,7 @@ export default function RegistroPage() {
         <CardHeader>
           <CardTitle>Creá tu cuenta</CardTitle>
           <CardDescription>
-            Registrate para participar en los sorteos de la fundación.
+            Registrate para participar en los sorteos de Apoyemos Juntos.
           </CardDescription>
         </CardHeader>
         <CardContent>

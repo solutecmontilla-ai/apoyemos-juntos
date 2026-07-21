@@ -2,6 +2,7 @@ import Link from "next/link";
 import { auth } from "@/auth";
 import { cerrarSesion } from "@/lib/actions/auth";
 import { Button } from "@/components/ui/button";
+import { Logo } from "@/components/logo";
 
 export async function SiteHeader() {
   const session = await auth();
@@ -10,8 +11,8 @@ export async function SiteHeader() {
   return (
     <header className="border-b bg-background">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-4">
-        <Link href="/" className="text-lg font-semibold">
-          Sorteos Fundación
+        <Link href="/" aria-label="Apoyemos Juntos">
+          <Logo />
         </Link>
         <nav className="flex items-center gap-4 text-sm">
           {!usuario && (
