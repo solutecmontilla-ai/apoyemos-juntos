@@ -16,9 +16,9 @@ export function SiteFooter() {
           <Image
             src="/brand/nexorse-logo.jpg"
             alt="Programa NexoRSE"
-            width={56}
-            height={56}
-            className="rounded-md"
+            width={144}
+            height={44}
+            className="h-11 w-auto rounded-md"
           />
         </div>
       </div>
