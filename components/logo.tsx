@@ -13,8 +13,8 @@ export function LogoMark({
       src={variant === "inverted" ? "/brand/w-icon-cyan.png" : "/brand/w-icon-black.png"}
       alt=""
       aria-hidden="true"
-      width={585}
-      height={434}
+      width={469}
+      height={130}
       className={cn("h-9 w-auto shrink-0", className)}
     />
   );

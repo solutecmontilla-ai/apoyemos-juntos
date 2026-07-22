@@ -25,10 +25,13 @@ export async function SiteHeader() {
             className="hidden h-7 w-auto sm:block"
           />
         </div>
-        <nav className="flex items-center gap-4 text-sm">
+        <nav className="flex items-center gap-2 text-sm sm:gap-4">
           {!usuario && (
             <>
-              <Link href="/login" className="text-muted-foreground hover:text-foreground">
+              <Link
+                href="/login"
+                className="whitespace-nowrap text-muted-foreground hover:text-foreground"
+              >
                 Iniciar sesión
               </Link>
               <Button render={<Link href="/registro" />} size="sm">
@@ -38,7 +41,10 @@ export async function SiteHeader() {
           )}
           {usuario && usuario.rol === "participante" && (
             <>
-              <Link href="/cuenta" className="text-muted-foreground hover:text-foreground">
+              <Link
+                href="/cuenta"
+                className="whitespace-nowrap text-muted-foreground hover:text-foreground"
+              >
                 Mi cuenta
               </Link>
               <form action={cerrarSesion}>
@@ -50,7 +56,10 @@ export async function SiteHeader() {
           )}
           {usuario && usuario.rol === "admin" && (
             <>
-              <Link href="/admin" className="text-muted-foreground hover:text-foreground">
+              <Link
+                href="/admin"
+                className="whitespace-nowrap text-muted-foreground hover:text-foreground"
+              >
                 Panel admin
               </Link>
               <form action={cerrarSesion}>
