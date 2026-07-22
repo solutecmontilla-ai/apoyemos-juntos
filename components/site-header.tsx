@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { auth } from "@/auth";
 import { cerrarSesion } from "@/lib/actions/auth";
@@ -11,9 +12,19 @@ export async function SiteHeader() {
   return (
     <header className="border-b bg-background">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-4">
-        <Link href="/" aria-label="Apoyemos Juntos">
-          <Logo />
-        </Link>
+        <div className="flex items-center gap-4">
+          <Link href="/" aria-label="Apoyemos Juntos">
+            <Logo />
+          </Link>
+          <span className="hidden h-8 w-px bg-border sm:block" aria-hidden="true" />
+          <Image
+            src="/brand/corporacion-william-logo.png"
+            alt="Corporación William"
+            width={820}
+            height={223}
+            className="hidden h-7 w-auto sm:block"
+          />
+        </div>
         <nav className="flex items-center gap-4 text-sm">
           {!usuario && (
             <>

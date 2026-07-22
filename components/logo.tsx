@@ -1,16 +1,22 @@
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
-export function LogoMark({ className }: { className?: string }) {
+export function LogoMark({
+  className,
+  variant = "default",
+}: {
+  className?: string;
+  variant?: "default" | "inverted";
+}) {
   return (
-    <span
+    <Image
+      src={variant === "inverted" ? "/brand/w-icon-cyan.png" : "/brand/w-icon-black.png"}
+      alt=""
       aria-hidden="true"
-      className={cn(
-        "inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-primary font-heading text-base font-extrabold text-primary-foreground",
-        className,
-      )}
-    >
-      AJ
-    </span>
+      width={585}
+      height={434}
+      className={cn("h-9 w-auto shrink-0", className)}
+    />
   );
 }
 
@@ -23,25 +29,18 @@ export function Logo({
 }) {
   return (
     <span className={cn("inline-flex items-center gap-2.5", className)}>
-      <LogoMark />
-      <span className="flex flex-col leading-none">
-        <span
-          className={cn(
-            "font-heading text-base font-extrabold uppercase tracking-tight",
-            variant === "inverted" ? "text-white" : "text-foreground",
-          )}
-        >
-          Apoyemos
-        </span>
-        <span
-          className={cn(
-            "-mt-0.5 font-heading text-base font-extrabold uppercase tracking-tight",
-            variant === "inverted" ? "text-[var(--brand-cyan)]" : "text-primary",
-          )}
-        >
-          Juntos
-        </span>
-      </span>
+      <LogoMark variant={variant} />
+      <Image
+        src={
+          variant === "inverted"
+            ? "/brand/apoyemos-juntos-wordmark-white.png"
+            : "/brand/apoyemos-juntos-wordmark-black.png"
+        }
+        alt="Apoyemos Juntos"
+        width={806}
+        height={302}
+        className="h-9 w-auto"
+      />
     </span>
   );
 }
