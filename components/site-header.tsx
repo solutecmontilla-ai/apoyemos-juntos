@@ -11,9 +11,9 @@ export async function SiteHeader() {
 
   return (
     <header className="border-b bg-background">
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-4">
-        <div className="flex items-center gap-4">
-          <Link href="/" aria-label="Apoyemos Juntos">
+      <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-x-3 gap-y-2 px-4 py-3 sm:py-4">
+        <div className="flex min-w-0 items-center gap-4">
+          <Link href="/" aria-label="Apoyemos Juntos" className="min-w-0 shrink">
             <Logo />
           </Link>
           <span className="hidden h-8 w-px bg-border sm:block" aria-hidden="true" />
@@ -25,7 +25,7 @@ export async function SiteHeader() {
             className="hidden h-7 w-auto sm:block"
           />
         </div>
-        <nav className="flex items-center gap-2 text-sm sm:gap-4">
+        <nav className="flex shrink-0 items-center gap-2 text-sm sm:gap-4">
           {!usuario && (
             <>
               <Link
